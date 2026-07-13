@@ -13,17 +13,16 @@ Proyecto de automatización de pruebas con Playwright y TypeScript sobre la apli
 2. Verifica que el menú de categorías es visible.
 3. Verifica que la barra de navegación contiene el enlace "Home".
 
-## Evidencia de ejecución
 ### Tests pasando en terminal
-![Tests en terminal](\img\Tests.png)
+![Tests en terminal](./img/Tests.png)
 
 ### Reporte HTML de Playwright
-![Reporte HTML](\img\Tests-2.png)
+![Reporte HTML](./img/Tests-2.png)
 
 ### Navegador ejecutando el test
-![Navegador](\img\Tests-3.png)
-![Navegador](\img\Tests-4.png)
-![Navegador](\img\Tests-5.png)
+![Navegador](./img/Tests-3.png)
+![Navegador](./img/Tests-4.png)
+![Navegador](./img/Tests-5.png)
 
 ### Modifica un test para que falle a propósito
-![Navegador](\img\Tests-error.png)
+![Navegador](./img/Tests-error.png)
