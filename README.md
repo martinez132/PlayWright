@@ -24,5 +24,5 @@ Proyecto de automatización de pruebas con Playwright y TypeScript sobre la apli
 ![Navegador](./img/Tests-4.png)
 ![Navegador](./img/Tests-5.png)
 
-### Modifica un test para que falle a propósito
+### Modificación de un test para que falle a propósito
 ![Navegador](./img/Tests-error.png)
