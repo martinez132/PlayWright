@@ -3,24 +3,23 @@ import * as fs from 'fs';
 
 // Crear carpeta para evidencias si no existe
 test.beforeAll(() => {
-    if (!fs.existsSync('./evidencias')) {
-        fs.mkdirSync('./evidencias');
+    if (!fs.existsSync('./evidencias/clase02')) {
+        fs.mkdirSync('./evidencias/clase02', { recursive: true });
     }
 });
-
 test.describe('Clase 02 - Navegación y esperas en DemoBlaze', () => {
     
 test('Navegar al carrito y regresar al inicio', async ({ page }) => {
     await page.goto('/');
     await expect(page).toHaveURL(/demoblaze/);
 
-    await page.screenshot({ path: './evidencias/01-pagina-inicio.png', fullPage: true });
+    await page.screenshot({ path: './evidencias/clase02/01-pagina-inicio.png', fullPage: true });
 
     await page.getByText('Cart').click();
     await page.waitForURL('**/cart.html');
     await expect(page).toHaveURL(/cart/);
 
-    await page.screenshot({ path: './evidencias/02-carrito-vacio.png', fullPage: true });
+   await page.screenshot({ path: './evidencias/clase02/02-carrito-vacio.png', fullPage: true });
 
     await page.goBack();
     await expect(page).toHaveURL(/demoblaze\.com\/?$/);
@@ -41,8 +40,7 @@ test('Navegar a la categoría Phones y ver un producto', async ({ page }) => {
 
     await productos.first().click();
     await page.waitForLoadState('domcontentloaded');
-    await page.screenshot({ path: './evidencias/03-detalle-producto.png', fullPage: true });
-
+    await page.screenshot({ path: './evidencias/clase02/03-detalle-producto.png', fullPage: true });
     await expect(page.getByText('Add to cart')).toBeVisible();
  
 });
@@ -51,13 +49,13 @@ test('Capturar el navbar y el footer por separado', async ({ page }) => {
     await page.goto('/');
 
     const navbar = page.locator('#navbarExample');
-    await navbar.screenshot({ path: './evidencias/04-navbar.png' });
+    await navbar.screenshot({ path: './evidencias/clase02/04-navbar.png' });
 
     // Captura del footer: se hace scroll hasta el final de la
     // página y se captura el viewport en esa posición. Evita
     // depender de un selector de clase que puede no coincidir.
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-    await page.screenshot({ path: './evidencias/05-footer.png' });
+    await page.screenshot({ path: './evidencias/clase02/05-footer.png' });
 });
 
 test('Verificar tiempo de carga de la página',
