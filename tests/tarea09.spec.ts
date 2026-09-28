@@ -64,7 +64,6 @@ testConWorker.describe('Reto 2 - Fixture de alcance worker', () => {
 });
 
 // Reto 3 - test.use() + parametrización
-
 const viewports = [
   { nombre: 'movil', width: 375, height: 667 },
   { nombre: 'escritorio', width: 1280, height: 720 },
