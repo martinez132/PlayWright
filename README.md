@@ -26,3 +26,6 @@ Proyecto de automatización de pruebas con Playwright y TypeScript sobre la apli
 
 ### Modificación de un test para que falle a propósito
 ![Navegador](./img/Tests-error.png)
+
+## Bug registrado
+BUG-001 (imágenes rotas en /broken-images): https://github.com/martinez132/PlayWright/issues/1
